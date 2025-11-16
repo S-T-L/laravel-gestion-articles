@@ -10,9 +10,9 @@ Elle permet d'effectuer des opérations CRUD (création, mise à jour et suppres
 - Vérifier que Composer, Git et Wampserver (ou équivalent) sont installés sur l'ordinateur.
 - **Cloner le repository** : ```bash git clone https://github.com/S-T-L/laravel-gestion-articles.git cd laravel-gestion-article```
 - **Installer les dépendances** : ```bash composer install```
-- ** Configurer l'environnement ** : ``` bash cp .env.example .env```
-- ** Créer la base de données **
-- ** Editer le fichier .env avec les informations de connexion**
-- ** Lancer les migrations et seeders pour remplir la base** : ```bash php artisan migrate:fresh --seed``` : cette commande va créer les tables 'familles' et 'articles' / Générer 5 familles aléatoires et 50 articles
-- ** Lancer le serveur ** : ``` bash php artisan serve ```
+- **Configurer l'environnement** : ``` bash cp .env.example .env```
+- **Créer la base de données**
+- **Editer le fichier .env avec les informations de connexion**
+- **Lancer les migrations et seeders pour remplir la base** : ```bash php artisan migrate:fresh --seed``` : cette commande va créer les tables 'familles' et 'articles' / Générer 5 familles aléatoires et 50 articles
+- **Lancer le serveur** : ``` bash php artisan serve ```
   
