@@ -8,7 +8,7 @@ Elle permet d'effectuer des opérations CRUD (création, mise à jour et suppres
 
 ## Test de l'application 
 - Vérifier que Composer, Git et Wampserver (ou équivalent) sont installés sur l'ordinateur.
-- **Cloner le repository** : ```bash git clone https://github.com/S-T-L/laravel-gestion-articles.git cd laravel-gestion-article```
+- **Cloner le repository** : ```git clone https://github.com/S-T-L/laravel-gestion-articles.git cd laravel-gestion-article```
 - **Installer les dépendances** : ```bash composer install```
 - **Configurer l'environnement** : ``` bash cp .env.example .env```
 - **Créer la base de données**
