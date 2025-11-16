@@ -3,7 +3,7 @@
 ## Présentation
 
 Cette application développée avec Laravel 10 permet de gérer une liste d'articles en base de données.
-Elle permet d'effectuer des opérations CRUD (création, mise à jour et suppression d'un article).
+Elle permet d'effectuer des opérations CRUD (création, mise à jour et suppression d'un article) et d'exporter la liste de tous les articles au format CSV.
 
 ## Schéma de la base de donnée : 
 <img width="698" height="408" alt="gestion-articles" src="https://github.com/user-attachments/assets/452b2380-dd00-45c7-ae66-fbd86755ca60" />
@@ -61,6 +61,16 @@ URL : http://localhost:8000/api/articles/{id} :
 </li>
 </ul>
 
+## Export des articles au format CSV : 
+
+URL : http://localhost:8000/api/articles/export/csv
+
+Réponse : 
+<ul>
+    <li>
+    Téléchargement automatique d'un fichier CSV contenant également les données calculées : Prix TTC et marge
+</li>
+</ul>
 
 
 
