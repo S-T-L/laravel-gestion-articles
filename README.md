@@ -30,25 +30,31 @@ Méthode HTTP : <strong>GET</strong><br>
 http://localhost:8000/api/articles
 <ul>
    <li>Réponse attendue : Liste complète des articles au format JSON</li>
-   <li>Exemple de réponse : ```json  "success": true,
-    "data": [
-        {
-            "id": 1,
-            "nom": "error",
-            "prix_ht": "2801.00",
-            "prix_achat": "1831.00",
-            "taux_tgc": "22.00",
-            "famille_id": 5,
-            "created_at": "2025-11-16T06:16:58.000000Z",
-            "updated_at": "2025-11-16T06:16:58.000000Z",
-            "famille": {
-                "id": 5,
-                "nom": "Animaux",
-                "created_at": "2025-11-16T06:16:58.000000Z",
-                "updated_at": "2025-11-16T06:16:58.000000Z"
-            }
-        },```</li>
+   <li>Exemple de réponse : </li>
 </ul>
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "nom": "error",
+      "prix_ht": "2801.00",
+      "prix_achat": "1831.00",
+      "taux_tgc": "22.00",
+      "famille_id": 5,
+      "created_at": "2025-11-16T06:16:58.000000Z",
+      "updated_at": "2025-11-16T06:16:58.000000Z",
+      "famille": {
+        "id": 5,
+        "nom": "Animaux",
+        "created_at": "2025-11-16T06:16:58.000000Z",
+        "updated_at": "2025-11-16T06:16:58.000000Z"
+      }
+    }
+  ]
+}
+```
 
 <h2>Insérer (insert)</h2>
 Méthode HTTP : <strong>POST</strong><br>
