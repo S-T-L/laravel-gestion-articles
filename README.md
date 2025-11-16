@@ -35,7 +35,7 @@ URL : http://localhost:8000/api/articles
 
 <h2>Créer un nouvel article </h2>
 Méthode HTTP : <strong>POST</strong><br>
-URL : http://localhost:8000/api/articles
+URL : http://localhost:8000/api/articles<br>
 Dans le body (Postman : onglet 'Body', sélectionner 'raw' et 'JSON') :
 - Ajouter les champs nécessaires au format JSON
 
