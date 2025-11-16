@@ -30,26 +30,37 @@ Méthode HTTP : <strong>GET</strong><br>
 URL : http://localhost:8000/api/articles
 <ul>
    <li>Réponse attendue : Liste complète des articles au format JSON</li>
-   <li>Exemple de réponse : </li>
+   
 </ul>
 
 <h2>Créer un nouvel article </h2>
 Méthode HTTP : <strong>POST</strong><br>
 URL : http://localhost:8000/api/articles<br>
 Dans le body (Postman : onglet 'Body', sélectionner 'raw' et 'JSON') :
-- Ajouter les champs nécessaires au format JSON
+<ul>
+    <li>Ajouter les champs nécessaires au format JSON</li>
+</ul>
+
 
 <h2>Modifier un article </h2>
 Méthode HTTP : <strong>PUT / PATCH</strong><br>
 URL : http://localhost:8000/api/articles/{id} : 
-- {id} doit être remplacé par l'identifiant de l'article à modifier
-Dans le body : 
-- Ajouter les champs à modifier au format JSON
+<ul>
+    <li>{id} doit être remplacé par l'identifiant de l'article à modifier
+</li>
+    <li>- Dans le body, ajouter les champs à modifier au format JSON</li>
+</ul>
+
 
 <h2>Supprimer un article </h2>
 Méthode HTTP : <strong>DELETE</strong><br>
 URL : http://localhost:8000/api/articles/{id} :
-- {id} doit être remplacé par l'identifiant de l'article à supprimer
+<ul>
+    <li>
+    {id} doit être remplacé par l'identifiant de l'article à supprimer
+</li>
+</ul>
+
 
 
 
