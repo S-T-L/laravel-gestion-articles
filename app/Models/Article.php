@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+
 class Article extends Model
 {
     use HasFactory;
@@ -34,20 +36,20 @@ class Article extends Model
     /**
      * Calcule le prix TTC
      *
-     * @return void
+     * @return float
      */
-    public function getPrixTTC()
+    public function getPrixTtc(): float
     {
-        return $this->prix_ht * (1 + $this->taux_tgc / 100);
+        return (float) $this->prix_ht * (1 + $this->taux_tgc / 100);
     }
 
     /**
      * Calcule la marge
      *
-     * @return void
+     * @return float
      */
-    public function getMarge()
+    public function getMarge(): float
     {
-        return $this->prix_ht - $this->prix_achat;
+        return (float) $this->prix_ht - $this->prix_achat;
     }
 }
