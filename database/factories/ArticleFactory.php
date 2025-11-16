@@ -20,6 +20,7 @@ class ArticleFactory extends Factory
     {
         // Génération du prix HT entre 1000 et 10 000 F
         $prixHt = $this->faker->numberBetween(1000, 10000);
+        //Prix d'achat < prix HT
         $prixAchat = $this->faker->numberBetween(500, $prixHt - 1);
 
         return [

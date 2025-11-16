@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
+ * Factory pour la génération des familles
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Famille>
  */
 class FamilleFactory extends Factory
