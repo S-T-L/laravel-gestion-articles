@@ -25,66 +25,32 @@ Elle permet d'effectuer des opérations CRUD (création, mise à jour et suppres
 
 ## Test via Postman : 
 
-<h2>Récupérer un contenu (select)</h2>
+<h2>Récupérer la liste des articles)</h2>
 Méthode HTTP : <strong>GET</strong><br>
-http://localhost:8000/api/articles
+URL : http://localhost:8000/api/articles
 <ul>
    <li>Réponse attendue : Liste complète des articles au format JSON</li>
    <li>Exemple de réponse : </li>
 </ul>
-```json
-{
-  "success": true,
-  "data": [
-    {
-      "id": 1,
-      "nom": "error",
-      "prix_ht": "2801.00",
-      "prix_achat": "1831.00",
-      "taux_tgc": "22.00",
-      "famille_id": 5,
-      "created_at": "2025-11-16T06:16:58.000000Z",
-      "updated_at": "2025-11-16T06:16:58.000000Z",
-      "famille": {
-        "id": 5,
-        "nom": "Animaux",
-        "created_at": "2025-11-16T06:16:58.000000Z",
-        "updated_at": "2025-11-16T06:16:58.000000Z"
-      }
-    }
-  ]
-}
-```
 
-<h2>Insérer (insert)</h2>
+<h2>Créer un nouvel article </h2>
 Méthode HTTP : <strong>POST</strong><br>
-http://localhost/rest_mediatekdocuments/table <br>
-Réponse attendue : Liste complète des articles au format JSON
-<ul>
-   <li>Key : 'champs'</li>
-   <li>Value : liste des champs (nom/valeur) qui serviront à l'insertion (au format json)</li>
-</ul>
+URL : http://localhost:8000/api/articles
+Dans le body (Postman : onglet 'Body', sélectionner 'raw' et 'JSON') :
+- Ajouter les champs nécessaires au format JSON
 
-<h2>Modifier (update)</h2>
-Méthode HTTP : <strong>PUT</strong><br>
-http://localhost/rest_mediatekdocuments/table/id (id optionnel)<br>
-<ul>
-   <li>'table' doit être remplacé par un nom de table (caractères acceptés : alphanumériques et '_')</li>
-   <li>'id' (optionnel) doit être remplacé par l'identifiant de la ligne à modifier (caractères acceptés : alphanumériques)</li>
-</ul>
-Dans le body (Dans Postman, onglet 'Body', cocher 'x-www-form-urlencoded'), ajouter :<br>
-<ul>
-   <li>Key : 'champs'</li>
-   <li>Value : liste des champs (nom/valeur) qui serviront à la modification (au format json)</li>
-</ul>
+<h2>Modifier un article </h2>
+Méthode HTTP : <strong>PUT / PATCH</strong><br>
+URL : http://localhost:8000/api/articles/{id} : 
+- {id} doit être remplacé par l'identifiant de l'article à modifier
+Dans le body : 
+- Ajouter les champs à modifier au format JSON
 
-<h2>Supprimer (delete)</h2>
+<h2>Supprimer un article </h2>
 Méthode HTTP : <strong>DELETE</strong><br>
-http://localhost/rest_mediatekdocuments/table/champs (champs optionnel)<br>
-<ul>
-   <li>'table' doit être remplacé par un nom de table (caractères acceptés : alphanumériques et '_')</li>
-   <li> 'champs' (optionnel) doit être remplacé par la liste des champs (nom/valeur) qui serviront déterminer les lignes à supprimer (au format json</li>
-</ul>
+URL : http://localhost:8000/api/articles/{id} :
+- {id} doit être remplacé par l'identifiant de l'article à supprimer
+
 
 
 
