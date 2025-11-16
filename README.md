@@ -10,6 +10,7 @@ Elle permet d'effectuer des opérations CRUD (création, mise à jour et suppres
 - Vérifier que Composer, Git et Wampserver (ou équivalent) sont installés sur l'ordinateur.
 - **Cloner le repository** : ```git clone https://github.com/S-T-L/laravel-gestion-articles.git cd laravel-gestion-article```
 - **Installer les dépendances** : ```composer install```
+- **Générer la clé d'application ** : ``` php artisan key:generate```
 - **Configurer l'environnement** : ``` copy .env.example .env```
 - **Créer la base de données**
 - **Editer le fichier .env avec les informations de connexion**
