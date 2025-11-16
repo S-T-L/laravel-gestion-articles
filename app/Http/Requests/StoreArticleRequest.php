@@ -34,6 +34,34 @@ class StoreArticleRequest extends FormRequest
     }
 
     /**
+     * Messages d'erreur
+     *
+     * @return array
+     */
+    public function messages(): array
+    {
+        return [
+            'nom.required' => 'Le nom de l\'article est obligatoire.',
+            'nom.string' => 'Le nom doit être une chaîne de caractères.',
+
+            'prix_ht.required' => 'Le prix HT est obligatoire.',
+            'prix_ht.numeric' => 'Le prix HT doit être un nombre.',
+            'prix_ht.min' => 'Le prix HT doit être supérieur ou égal à 0.',
+
+            'prix_achat.required' => 'Le prix d\'achat est obligatoire.',
+            'prix_achat.numeric' => 'Le prix d\'achat doit être un nombre.',
+            'prix_achat.min' => 'Le prix d\'achat doit être supérieur ou égal à 0.',
+            'prix_achat.lt' => 'Le prix d\'achat doit être inférieur au prix HT.',
+
+            'taux_tgc.required' => 'Le taux TGC est obligatoire.',
+            'taux_tgc.numeric' => 'Le taux TGC doit être un nombre.',
+            'taux_tgc.in' => 'Le taux TGC doit être : 3, 6, 11 ou 22.',
+
+            'famille_id.required' => 'La famille de l\'article est obligatoire.',
+            'famille_id.exists' => 'La famille sélectionnée n\'existe pas.',
+        ];
+    }
+    /**
      * Réponse json avec les erreurs de validation
      *
      * @param Validator $validator
