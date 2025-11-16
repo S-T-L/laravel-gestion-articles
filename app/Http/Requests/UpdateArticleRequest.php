@@ -17,7 +17,7 @@ class UpdateArticleRequest extends FormRequest
     }
 
     /**
-     * Si prix_ht absent -> utilisation de la valeur actuelle
+     * Ajoute les valeurs prix_ht et prix_achat si non fournies
      *
      * @return void
      */
@@ -27,6 +27,12 @@ class UpdateArticleRequest extends FormRequest
         if (!$this->has('prix_ht')) {
             $this->merge([
                 'prix_ht' => $this->route('article')->prix_ht
+            ]);
+        }
+
+        if (!$this->has('prix_achat')) {
+            $this->merge([
+                'prix_achat' => $this->route('article')->prix_achat
             ]);
         }
     }
@@ -42,7 +48,7 @@ class UpdateArticleRequest extends FormRequest
         return [
             'nom' => 'sometimes|string|max:255',
             'prix_ht' => 'sometimes|numeric|min:0',
-            'prix_achat' => 'sometimes|numeric|min:0',
+            'prix_achat' => 'sometimes|numeric|min:0|lt:prix_ht',
             'taux_tgc' => 'sometimes|numeric|in:3,6,11,22',
             'famille_id' => 'sometimes|exists:familles,id'
 

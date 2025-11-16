@@ -27,4 +27,4 @@ Route::get('articles/export/csv', [ArticleController::class, 'exportCsv']);
 /**
  * Génération des routes API
  */
-Route::apiResource('articles', ArticleController::class);
+Route::apiResource('articles', ArticleController::class)->except(['show']);
