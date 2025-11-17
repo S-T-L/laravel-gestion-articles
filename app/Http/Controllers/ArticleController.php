@@ -82,6 +82,8 @@ class ArticleController extends Controller
             ], 404);
         }
 
+        $article->delete();
+
         return response()->json([
             'success' => true,
             'message' => 'Article supprimé avec succès'
