@@ -17,10 +17,10 @@ Elle permet d'effectuer des opérations CRUD (création, mise à jour et suppres
 - **Cloner le repository** : ```git clone https://github.com/S-T-L/laravel-gestion-articles.git cd laravel-gestion-article```
 - **Installer les dépendances** : ```composer install```
 - **Configurer l'environnement** : ``` copy .env.example .env```
-- **Générer la clé d'application ** : ``` php artisan key:generate```
+- **Générer la clé d'application** : ``` php artisan key:generate```
 - **Créer la base de données**
 - **Editer le fichier .env avec les informations de connexion**
-- **Lancer les migrations ```php artisan migrate```
+- **Lancer les migrations** ```php artisan migrate```
 - **Exécuter les seeders pour remplir la base** : ``` php artisan db:seed``` : cette commande va créer les tables 'familles' et 'articles' / Générer 5 familles aléatoires et 50 articles
 - **Lancer le serveur** : ``` php artisan serve ```
 
