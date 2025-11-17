@@ -71,9 +71,16 @@ class ArticleController extends Controller
      * @param Article $article
      * @return JsonResponse
      */
-    public function destroy(Article $article): JsonResponse
+    public function destroy($id): JsonResponse
     {
-        $article->delete();
+        $article = Article::find($id);
+
+        if (!$article) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Article introuvable'
+            ], 404);
+        }
 
         return response()->json([
             'success' => true,
