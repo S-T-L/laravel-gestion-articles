@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 
-
+/**
+ * Modèle Article
+ */
 class Article extends Model
 {
     use HasFactory;

@@ -102,6 +102,7 @@ class ArticleController extends Controller
         return response()->streamDownload(function () {
             $csv = fopen('php://output', 'w');
 
+            fprintf($csv, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
             // En-têtes du CSV
             fputcsv($csv, [
